@@ -1,4 +1,4 @@
-import { Component, Input, AfterViewInit } from '@angular/core';
+import { Component, OnInit, Input, AfterViewInit } from '@angular/core';
 import { ICryptoObject } from '../../interfaces/IcryptoObject';
 declare var $: any;
 @Component({
@@ -8,15 +8,14 @@ declare var $: any;
 })
 export class BoxComponent implements AfterViewInit {
   @Input('info') info: ICryptoObject;
-
   constructor() { }
 
- 
   ngAfterViewInit() {
     $(document).ready(function () {
       $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
+        $('[data-toggle="tooltip"]').tooltip();
       });
     });
   }
 }
+

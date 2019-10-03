@@ -1,3 +1,69 @@
+body{
+    min-height: 400px;
+}
+
+.mainContainer {
+    text-align: center;
+    position: relative;
+    min-height: 100vh;
+}
+
+.footerStyle {
+    background-color: #8497a0;
+    position: relative;
+    margin-top: 3rem;
+    bottom: 0;
+    width: 100%;
+    height: 5.5rem;
+}
+
+.footerContent {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.navbar-default {
+    background-color: #8497a0;
+    border-color: #1d2123;
+}
+
+.navbar {
+    border-radius: 0px !important;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: rgb(221, 243, 240);
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    color: rgb(36, 39, 39);
+}
+
+.navbar-default .navbar-brand {
+    color: rgb(221, 243, 240);
+}
+
+.navbar-default .navbar-brand:hover {
+    color: rgb(36, 39, 39);
+}
+
+.form-control {
+    width: 20rem;
+    margin: auto;
+}
+
+.form-control:focus {
+    border-color: #8497a0;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgb(212, 232, 243);
+}
+
 .noResults {
     padding: 10rem;
+}
+
+.black-overlay {
+    position: relative !important;
+    bottom: 0 !important;
 }

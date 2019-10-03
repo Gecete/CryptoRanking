@@ -6,18 +6,16 @@ import { AppComponent } from './app.component';
 import { BoxComponent } from './components/box/box.component';
 import { QueryService } from './services/query.service';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
 import { SearchFilterPipe } from './pipes/search-filter.pipe';
+import { FormsModule } from '@angular/forms';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
-import { NgxSpinnerModule } from 'ngx-spinner';
-
+import { NgxSpinnerModule } from "ngx-spinner";
 
 @NgModule({
   declarations: [
     AppComponent,
     BoxComponent,
-    SearchFilterPipe
-    
+    SearchFilterPipe,
   ],
   imports: [
     BrowserModule,
