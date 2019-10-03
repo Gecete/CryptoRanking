@@ -1,3 +1,10 @@
-<div class="autoGrid">
-  box works!
+<div *ngIf="info"   class="autoGrid">
+  <h2>#{{info.id}}</h2>
+  <a target="_blank" href="{{info.link}}">
+    <h3>{{info.name.length < 12 ? info.name : info.code}}</h3>
+    <img id="{{ info.id }}" data-toggle="tooltip" data-placement="bottom"
+      title="{{info.description === null ? 'No description available' : info.description}}" src="{{info.symbol}}"
+      height="50" width="50" alt="{{info.name}}">
+  </a>
+  <h4>{{info.value}} USD</h4>
 </div>
