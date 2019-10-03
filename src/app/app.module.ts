@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { SearchFilterPipe } from './pipes/search-filter.pipe';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 
 @NgModule({
@@ -16,12 +17,14 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
     AppComponent,
     BoxComponent,
     SearchFilterPipe
+    
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    InfiniteScrollModule
+    InfiniteScrollModule,
+    NgxSpinnerModule
   ],
   providers: [QueryService],
   bootstrap: [AppComponent]

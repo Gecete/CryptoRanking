@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { QueryService } from './services/query.service';
 import { ICryptoObject } from './interfaces/IcryptoObject';
+import { NgxSpinnerService } from "ngx-spinner";
 
 @Component({
   selector: 'app-root',
@@ -14,7 +15,7 @@ export class AppComponent {
   scrollIndex :number = 0;
   totalresults : number;
 
-constructor(private queryService: QueryService, ) { }
+constructor(private queryService: QueryService,  private spinner: NgxSpinnerService ) { }
 
 
 getResults = (offset: number) => {
@@ -39,8 +40,10 @@ getResults = (offset: number) => {
       });
       this.totalresults =value.data.stats.total;
       this.title = String(this.totalresults) + ' Cryptos ordered by MarketCap';
+      this.spinner.hide();
     }
   }, (error) => {
+    this.spinner.hide();
     console.log(error);
   });
 }
@@ -53,11 +56,14 @@ getResults = (offset: number) => {
     //keep doing this call ig there are results in the DB
     if(this.totalresults!==this.cryptoObjects.length){
       this.scrollIndex = this.scrollIndex + 100;
+      this.spinner.show();
+
       this.getResults(this.scrollIndex);
     }
   }
 
   ngOnInit() {
+    this.spinner.show();
     this.getResults(this.scrollIndex);
   }
 

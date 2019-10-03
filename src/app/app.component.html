@@ -12,6 +12,7 @@
   <div class="noResults" *ngIf="(cryptoObjects | searchfilter: searchInput).length === 0">
     <h1>No results found for '{{searchInput}}'</h1>
   </div>
+  <ngx-spinner type="ball-running-dots" fullScreen=false color="#1d2123" bdColor="transparent"></ngx-spinner>
 </div>
 <div
 class="search-results"
