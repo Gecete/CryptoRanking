@@ -1,17 +1,22 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, AfterViewInit } from '@angular/core';
 import { ICryptoObject } from '../../interfaces/IcryptoObject';
-
+declare var $: any;
 @Component({
   selector: 'app-box',
   templateUrl: './box.component.html',
   styleUrls: ['./box.component.scss']
 })
-export class BoxComponent implements OnInit {
+export class BoxComponent implements AfterViewInit {
   @Input('info') info: ICryptoObject;
 
   constructor() { }
 
-  ngOnInit() {
+ 
+  ngAfterViewInit() {
+    $(document).ready(function () {
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+      });
+    });
   }
-
 }
