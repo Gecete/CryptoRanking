@@ -12,7 +12,7 @@ import { NgxSpinnerService } from "ngx-spinner";
 })
 export class AppComponent implements OnInit {
 
-  title = 'Cryptos ordered by MarketCap';
+  title = 'Top 500 Cryptos by MarketCap';
   cryptoObjects: ICryptoObject[] = [];
   searchInput : string = '';
   scrollIndex :number = 0;
@@ -42,7 +42,6 @@ export class AppComponent implements OnInit {
           this.cryptoObjects.push(coinInfo)
         });
         this.totalresults =value.data.stats.total;
-        this.title = String(this.totalresults) + ' Cryptos ordered by MarketCap';
         this.spinner.hide();
       }
     }, (error) => {
@@ -59,7 +58,7 @@ export class AppComponent implements OnInit {
   onScroll() {
     
     //keep doing this call ig there are results in the DB
-    if(this.totalresults!==this.cryptoObjects.length){
+    if(500>this.cryptoObjects.length){
       this.scrollIndex = this.scrollIndex + 100;
       this.spinner.show();
       this.getResults(this.scrollIndex);
@@ -67,6 +66,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
+    window.scrollTo(0,0)
     this.spinner.show();
     this.getResults(this.scrollIndex);
   }
