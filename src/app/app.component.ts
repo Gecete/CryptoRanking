@@ -42,7 +42,7 @@ export class AppComponent implements OnInit {
           this.cryptoObjects.push(coinInfo)
         });
         this.totalresults =value.data.stats.total;
-        this.title = String(this.totalresults) + ' Cryptos ordered by MarketCap';
+        this.title = 'Top 500 Cryptos ordered by MarketCap';
         this.spinner.hide();
       }
     }, (error) => {
@@ -53,13 +53,13 @@ export class AppComponent implements OnInit {
     });
   }
 
-  //this function is triggered by infinite scroll component, it needs to be used, otherwise the browser will froze due to 
+  //this function is triggered by infinite scroll component, it needs to be used, otherwise the browser will froze due to
   //the big ammount of items to display at a time.
-  //this funcion is called when the scroll is nearly at the bottom of the page, there I just concat the next 10 results array shown 
+  //this funcion is called when the scroll is nearly at the bottom of the page, there I just concat the next 10 results array shown
   onScroll() {
-    
+
     //keep doing this call ig there are results in the DB
-    if(this.totalresults!==this.cryptoObjects.length){
+    if(500>this.cryptoObjects.length){
       this.scrollIndex = this.scrollIndex + 100;
       this.spinner.show();
       this.getResults(this.scrollIndex);
