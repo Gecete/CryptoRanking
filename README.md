@@ -5,11 +5,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Development server
 
 Steps to run the webapp:
-### Clone the project
-### Enter the folder containing Node Modules and open a git Bash windo there
-### Run `npm i`
-### When finished, run `ng serve`.
-### Open http://localhost:4200/ at your favourite browser.
+- Clone the project
+- Enter the folder containing Node Modules and open a git Bash windo there
+- Run `npm i`
+- When finished, run `ng serve`.
+- Open http://localhost:4200/ at your favourite browser.
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
