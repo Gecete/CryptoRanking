@@ -23,7 +23,7 @@
     "@angular/router": "^5.2.0",
     "bootstrap": "^3.3.7",
     "core-js": "^2.4.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "ngx-bootstrap": "^5.1.2",
     "ngx-infinite-scroll": "^0.8.4",
     "ngx-spinner": "^2.0.0",
